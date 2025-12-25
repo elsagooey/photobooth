@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photobooth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="booth-container">
+        <h1 class="title">*✧･ﾟphotobooth･ﾟ✧*</h1>
+        
+        <div class="viewport">
+            <div id="countdown"></div>
+            <div id="flash"></div>
+            <video id="video" autoplay playsinline></video>
+            <div id="status-bubble">Welcome!</div>
+        </div>
+        
+        <div class="controls">
+            <div class="toggle-container">
+                <label class="switch">
+                    <input type="checkbox" id="bw-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label">B&W Filter</span>
+            </div>
+        
+            <button id="snap" class="icon-btn">
+                <img src="camera.png" alt="Take Photos">
+            </button>
+        
+            <a id="download-link" href="#" download="photostrip.png" style="display:none;">
+                <button type="button" class="icon-btn save-btn">
+                    <img src="download.png" alt="Save Strip">
+                </button>
+            </a>
+        </div>
+
+        <canvas id="canvas" width="400" height="1200" style="display:none;"></canvas>
+        
+        <div class="output">
+            <img id="photo" src="" alt="">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
